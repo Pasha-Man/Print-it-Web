@@ -67,7 +67,7 @@ function Service(){
             <input type="text" id="holiday" style={{marginRight:'10px',width:'120px'}}></input>
             <label for="holiday" style={{marginRight:'10px'}}>
                   <h5 className="custom-container-h3">
-                    date
+                    day
                 </h5>
             </label>
             <input type="text" id="holiday" style={{marginRight:'10px',width:'120px'}}></input>
@@ -97,7 +97,7 @@ function Service(){
             <input type="text" id="holiday" style={{marginRight:'10px',width:'120px'}}></input>
             <label for="holiday" style={{marginRight:'10px'}}>
                   <h5 className="custom-container-h3">
-                    date
+                    day
                 </h5>
             </label>
             <input type="text" id="holiday" style={{marginRight:'10px',width:'120px'}}></input>

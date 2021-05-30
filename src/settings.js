@@ -59,7 +59,7 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
-                    placeholder="user1@gmail.com"
+                    placeholder="sheikhpasha12@gmail.com"
                   ></input>
                   <i
                     className="fa fa-edit"
@@ -103,7 +103,7 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
-                    placeholder="1234566"
+                    placeholder="12345678"
                   ></input>
                   <i
                     className="fa fa-eye"
@@ -147,7 +147,7 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
-                    placeholder="0300-4323125"
+                    placeholder="03072284570"
                   ></input>
                   <i
                     className="fa fa-edit"
@@ -191,7 +191,7 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
-                    placeholder="Old cafe, shop #02, Comsats University, Islamabad"
+                    
                   ></input>
                   <i
                     className="fa fa-edit"

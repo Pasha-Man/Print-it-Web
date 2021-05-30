@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 
+
 class Signin extends Component {
   constructor() {
     super();
@@ -63,15 +64,15 @@ class Signin extends Component {
                   value={password}
                 />
               </div>
-              <button type="submit" class="btn btn-primary btn-block">
-                Login
+              <button type="submit" class="btn btn-primary btn-block" >
+                Login 
               </button>
             </form>
             <p class="lead mt-4">
               <a href="/dashboard">dashboard</a>
             </p>
             <p classs="lead mt-4">
-              <a href="/Signup">Create account?</a> 
+              <a href="/Signup">Create account?</a>
             </p>
           </div>
         </div>
