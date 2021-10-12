@@ -6,6 +6,7 @@ import Settings from "./settings";
 import Signin from "./Login";
 import Signup from "./Signup";
 function App(){
+  
   return (
     <switch>
       <Route path="/Signup" component={Signup} default />
