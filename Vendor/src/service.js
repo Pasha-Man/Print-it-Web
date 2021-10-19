@@ -1,18 +1,21 @@
 import React from "react";
 import Header from "./header";
+import NotificationPopup from "./NotificationPopup";
+
 function Service(){
   return(
 <div>
     <Header 
     service="service"
     />
+    <NotificationPopup/>
     <div className="custom-container mt-5 mb-5">
       <div className="row" style={{display:"flex",justifyContent:"center"}}>
         <div className="col-md-4" style={{textAlign:"center"}}>
           <h3 className="service-h3">
             Services
           </h3>
-        </div>
+        </div>``
       </div>
       <div className="service-pad"> 
         <p>

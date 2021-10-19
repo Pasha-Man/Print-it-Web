@@ -1,10 +1,13 @@
 import React from "react";
 import Header from "./header";
 
+import NotificationPopup from "./NotificationPopup";
+
 function Settings(){
   return (
     <div>
       <Header setting="setting" />
+      <NotificationPopup />
       <div className="custom-container mb-5 mt-5">
         <div
           className="row"
@@ -191,7 +194,6 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
-                    
                   ></input>
                   <i
                     className="fa fa-edit"
@@ -299,8 +301,8 @@ function Settings(){
                 style={{ display: "flex", justifyContent: "center" }}
               >
                 <div className="col-md-4" style={{ textAlign: "center" }}>
-                  <button className="service-h3" style={{ border: "none" }} >
-                     Save
+                  <button className="service-h3" style={{ border: "none" }}>
+                    Save
                   </button>
                 </div>
               </div>
