@@ -53,7 +53,7 @@ function Header(props) {
                 </a>
               </li>
               <li class="nav-item center-item">
-                <a class="nav-link" href="home">
+                <a class="nav-link" href="/Wallet">
                   <i class="fa fa-briefcase fa-2x center-icon"></i>
                 </a>
               </li>

@@ -8,6 +8,10 @@ import Signup from "./Signup";
 import NotificationPopup from "./NotificationPopup";
 import NotificationContext from "./NotificationContext";
 import Background from "./backgroundAll.png";
+import Cancelled from "./CancelledOrder";
+import History from "./OrderHistory";
+import Wallet from "./Wallet";
+import Order from "./Order";
 function App() {
   const [popUpActive, setPopUpActive] = useState(false);
   return (
@@ -16,6 +20,10 @@ function App() {
         <Route path="/Signup" component={Signup} default />
         <Route path="/" component={Signin} exact />
         <Route path="/dashboard" component={Home} exact />
+        <Route path="/Wallet" component={Wallet} exact />
+        <Route path="/Order" component={Order} exact />
+        <Route path="/CancelledOrder" component={Cancelled} exact />
+        <Route path="/OrderHistory" component={History} exact />
         <Route path="/service" component={Service} />
         <Route path="/settings" component={Settings} />
       </switch>

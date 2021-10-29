@@ -291,7 +291,11 @@ body{
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    background-image: url('./backgroundAll.png');
+    
+   
+}
+.cover-all{
+  background-image: url('./backgroundAll.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -830,6 +834,22 @@ box-shadow:  0px 1px 10px 0px #d4d4d4;
     text-align: center;
     border-radius: 5px;
      }
+    .service-h31{
+            background: #b71c1c;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;}
+    .service-h32{
+            background:#f1b560 ;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;}
      .service-pad{
             padding: 5% 20%;
             /* background-image: url('./backgroundAll.png');
@@ -858,10 +878,26 @@ box-shadow:  0px 1px 10px 0px #d4d4d4;
     padding: 14px;
     border-radius: 60px;
     text-align: center; 
+    
+     }
+     .print-inner1{
+        background: #ffc7ae;
+    padding: 14px;
+    border-radius: 60px;
+    text-align: center; 
+    
+     }
+     .print-inner2{
+        background: #ffc7ae;
+    padding: 14px;
+    border-radius: 60px;
+    text-align: center; 
+    
      }
      .row{
         margin: 0;
         padding: 0;
+        
      }
      .print-inner i{
         color: #ff976d;
@@ -907,13 +943,20 @@ box-shadow:  0px 1px 10px 0px #d4d4d4;
      .boldspan{
         font-weight: bold;
      }
+     .boldspan1{
+        font-weight:bold;
+     }
      .custom-container {
         font-family: poppins;
     position: absolute;
     top: 120px;
     left: 80px;
     right: 0;
-    
+    background-image: url('./backgroundAll.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
     
 }
      .special-shop{
