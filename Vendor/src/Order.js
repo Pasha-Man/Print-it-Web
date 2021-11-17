@@ -7,10 +7,7 @@ function Order() {
     <div>
       <Header printer="printer" />
       <NotificationPopup />
-      <div
-        className="custom-container mt-5 mb-5"
-        
-      >
+      <div className="custom-container mt-5 mb-5">
         <div
           className="row"
           style={{ display: "flex", justifyContent: "center" }}
@@ -41,10 +38,67 @@ function Order() {
               </div>
             </div>
           </div>
-          <h4 className="boldspan mb-5 mt-5">
-            Check Order
-          </h4>
-          
+          <h4 className="boldspan mb-5 mt-5">Check Order</h4>
+          <div>
+            <button
+              className="greenButton"
+              onClick={() => {
+                window.location.href = "/CurrentOrder";
+              }}
+            >
+              Current Order
+            </button>
+            <div
+              style={{
+                background: "#F6F6F6",
+                borderRadius: "8px",
+                padding: "20px 0px",
+                width: "50%",
+              }}
+            >
+              <h4>check current order</h4>
+            </div>
+          </div>
+          <div>
+            <button
+              className="yellowButton"
+              onClick={() => {
+                window.location.href = "/OrderHistory";
+              }}
+            >
+              Order History
+            </button>
+            <div
+              style={{
+                background: "#F6F6F6",
+                borderRadius: "8px",
+                padding: "20px 0px",
+                width: "50%",
+              }}
+            >
+              <h4>See the details of orders</h4>
+            </div>
+          </div>
+          <div>
+            <button
+              className="redButton"
+              onClick={() => {
+                window.location.href = "/CancelledOrder";
+              }}
+            >
+              Cancelled Order
+            </button>
+            <div
+              style={{
+                background: "#F6F6F6",
+                borderRadius: "8px",
+                padding: "20px 0px",
+                width: "50%",
+              }}
+            >
+              <h4> See the details of Cancelled orders</h4>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -295,10 +295,10 @@ body{
    
 }
 .cover-all{
-  background-image: url('./backgroundAll.png');
+  /* background-image: url('./backgroundAll.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
    
 }
 .main-top-left {
@@ -850,6 +850,14 @@ box-shadow:  0px 1px 10px 0px #d4d4d4;
     font-weight: bold;
     text-align: center;
     border-radius: 5px;}
+     .service-h33{
+            background: #5cb85c;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;}
      .service-pad{
             padding: 5% 20%;
             /* background-image: url('./backgroundAll.png');
@@ -882,9 +890,10 @@ box-shadow:  0px 1px 10px 0px #d4d4d4;
      }
      .print-inner1{
         background: #ffc7ae;
-    padding: 14px;
+    padding: 35px;
+    width: 350px;
     border-radius: 60px;
-    text-align: center; 
+    text-align: left; 
     
      }
      .print-inner2{
@@ -934,7 +943,7 @@ box-shadow:  0px 1px 10px 0px #d4d4d4;
      .setting,
      .service,
      .printer{
-        background: #c1c1ff;
+        /* background: #c1c1ff; */
         padding: 20px 0;
      }
      .custom-container-h3{
@@ -952,10 +961,10 @@ box-shadow:  0px 1px 10px 0px #d4d4d4;
     top: 120px;
     left: 80px;
     right: 0;
-    background-image: url('./backgroundAll.png');
+    /* background-image: url('./backgroundAll.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
    
     
 }
@@ -2183,3 +2192,27 @@ transition: transform 80ms ease-in;
 }
 
 
+.greenButton{
+  background:#5cb85c;
+  color:white;
+  font-size:large;
+  font-weight:bold;
+  padding:20px;
+
+}
+.yellowButton{
+  background:#f0ad4e;
+  color:white;
+  font-size:large;
+  font-weight:bold;
+  padding:20px;
+
+}
+.redButton{
+  background:#d9534f;
+  color:white;
+  font-size:large;
+  font-weight:bold;
+  padding:20px;
+
+}

@@ -12,14 +12,16 @@ import Cancelled from "./CancelledOrder";
 import History from "./OrderHistory";
 import Wallet from "./Wallet";
 import Order from "./Order";
+import Current from "./CurrentOrder";
 function App() {
   const [popUpActive, setPopUpActive] = useState(false);
   return (
     <NotificationContext.Provider value={{ popUpActive, setPopUpActive }}>
       <switch>
         <Route path="/Signup" component={Signup} default />
-        <Route path="/" component={Signin} exact />
-        <Route path="/dashboard" component={Home} exact />
+        <Route path="/SignIn" component={Signin} exact />
+        <Route path="/" component={Home} exact />
+        <Route path="/CurrentOrder" component={Current} exact />
         <Route path="/Wallet" component={Wallet} exact />
         <Route path="/Order" component={Order} exact />
         <Route path="/CancelledOrder" component={Cancelled} exact />

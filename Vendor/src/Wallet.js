@@ -28,14 +28,16 @@ function Wallet() {
               <div className="col-md-4 mx-auto">
                 <div className="print-inner1">
                   <p className="boldspan">Add money to Customer Wallet</p>
+                  <p>Enter amount</p>
+                  {/* <input type="text">asd </input> */}
+                  
                 </div>
               </div>
 
               <div className="col-md-4 mx-auto">
                 <div className="print-inner2">
-                  <i className="fa fa-file"></i>
-                  <span>9</span>
-                  <p className="boldspan">Total Order Today</p>
+                  
+                  <p className="boldspan">Wallet is nil currently</p>
                 </div>
               </div>
             </div>
