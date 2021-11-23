@@ -69,7 +69,10 @@ function Shops () {
           className="row"
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <div className="col-md-2" style={{ textAlign: "center" }}>
+          <div
+            className="col-md-2"
+            style={{ textAlign: "center", width: "20%" }}
+          >
             <h3 className="service-h3">Print Shops</h3>
           </div>
         </div>
@@ -106,33 +109,37 @@ function Shops () {
                 </tr>
               </thead>
               <tbody>
-                {Data.map(data => {
+                {Data.map((data) => {
                   return (
-
                     <tr>
                       <td>{data.name}</td>
                       <td>{data.joinedDate.toDate().toDateString()}</td>
                       <td>{data.number}</td>
                       <td>{data.location}</td>
                       <td>
-                        <button className="blue-button"> Add
-                        </button>
+                        <button className="blue-button"> Add</button>
                       </td>
                       <td>
-                        <button className="blue-button" onClick={(e) => handleBlock(data.id).then(() => window.location.reload()
-                        )}>Block</button>
+                        <button
+                          className="blue-button"
+                          onClick={(e) =>
+                            handleBlock(data.id).then(() =>
+                              window.location.reload()
+                            )
+                          }
+                        >
+                          Block
+                        </button>
                       </td>
                     </tr>
-                  )
+                  );
                 })}
-
-
               </tbody>
             </Table>
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
 export default Shops;

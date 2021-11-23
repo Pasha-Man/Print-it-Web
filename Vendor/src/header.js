@@ -1,9 +1,15 @@
 import React, { useContext } from "react";
-
+import firebase, { db } from "./config";
 import NotificationContext from "./NotificationContext";
+import { useHistory } from "react-router-dom";
 
 function Header(props) {
   const { popUpActive, setPopUpActive } = useContext(NotificationContext);
+  const history = useHistory();
+  const handleSignOut = () => {
+    firebase.auth().signOut();
+    history.replace("/NewSignIn");
+  };
   return (
     <div>
       <div class="container-scroller" id="app">
@@ -18,13 +24,16 @@ function Header(props) {
               <span class="fa fa-bars" style={{ color: "white" }}></span>
             </button>
           </div>
-          <div
-            onClick={() => setPopUpActive(!popUpActive)}
-            class="navbar-menu-wrapper d-flex align-items-center"
-          >
-            <i className="fa fa-long-arrow-alt-left fa-2x"></i>
+          <div class="navbar-menu-wrapper d-flex align-items-center">
+            <i
+              className="fa fa-long-arrow-alt-left fa-2x"
+              onClick={handleSignOut}
+            ></i>
             <h1>Print it</h1>
-            <i className="fa fa-bell fa-2x"></i>
+            <i
+              className="fa fa-bell fa-2x"
+              onClick={() => setPopUpActive(!popUpActive)}
+            ></i>
           </div>
         </nav>
         <div

@@ -58,7 +58,7 @@ function Customer() {
           className="row"
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <div className="col-md-2" style={{ textAlign: "center" }}>
+          <div className="col-md-2" style={{ textAlign: "center",width:"20%" }}>
             <h3 className="service-h3">Customers</h3>
           </div>
         </div>

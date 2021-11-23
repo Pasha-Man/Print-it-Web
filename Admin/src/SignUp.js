@@ -48,7 +48,7 @@ export default function SignUp () {
       });
   };
 
-  if (isUser) return <Redirect to="/" />
+  if (isUser) return <Redirect to="/SignIn" />
 
   return (
     <ThemeProvider theme={theme}>

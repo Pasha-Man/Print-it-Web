@@ -17,7 +17,7 @@ function Order() {
           </div>
         </div>
         <div style={{ padding: "0 10%" }} className="mt-5 mb-5">
-          <h4 className="boldspan mb-5">See orders of th Shop</h4>
+          <h4 className="boldspan mb-5">See orders of the Shop</h4>
           <div className="row mt-3 mb-3">
             <div className="col-md-4">
               <div className="print-inner">
@@ -39,7 +39,12 @@ function Order() {
             </div>
           </div>
           <h4 className="boldspan mb-5 mt-5">Check Order</h4>
-          <div>
+          <div
+            className="d-flex flex-row"
+            style={{
+              padding: "10px 0px",
+            }}
+          >
             <button
               className="greenButton"
               onClick={() => {
@@ -52,14 +57,20 @@ function Order() {
               style={{
                 background: "#F6F6F6",
                 borderRadius: "8px",
-                padding: "20px 0px",
+                padding: "20px 20px",
                 width: "50%",
+                marginLeft: "295px",
               }}
             >
               <h4>check current order</h4>
             </div>
           </div>
-          <div>
+          <div
+            className="d-flex flex-row"
+            style={{
+              padding: "10px 0px",
+            }}
+          >
             <button
               className="yellowButton"
               onClick={() => {
@@ -72,14 +83,20 @@ function Order() {
               style={{
                 background: "#F6F6F6",
                 borderRadius: "8px",
-                padding: "20px 0px",
+                padding: "20px 20px",
                 width: "50%",
+                marginLeft: "300px",
               }}
             >
-              <h4>See the details of orders</h4>
+              <h4> See the details of orders</h4>
             </div>
           </div>
-          <div>
+          <div
+            className="d-flex flex-row"
+            style={{
+              padding: "10px 0px",
+            }}
+          >
             <button
               className="redButton"
               onClick={() => {
@@ -92,8 +109,9 @@ function Order() {
               style={{
                 background: "#F6F6F6",
                 borderRadius: "8px",
-                padding: "20px 0px",
+                padding: "20px 20px",
                 width: "50%",
+                marginLeft: "270px",
               }}
             >
               <h4> See the details of Cancelled orders</h4>

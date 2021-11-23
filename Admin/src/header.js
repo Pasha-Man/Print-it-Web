@@ -48,11 +48,11 @@ function Header (props) {
                                     <i class="fa fa-list-alt fa-2x center-icon"></i>
                                 </a>
                             </li>
-                            <li class="nav-item center-item" className={props.setting}>
+                            {/* <li class="nav-item center-item" className={props.setting}>
                                 <a class="nav-link" href="/settings" >
                                     <i class="fa fa-cog fa-2x center-icon"></i>
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
                     <div class="main-panel">

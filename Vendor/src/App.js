@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import Home from "./home";
 import Service from "./service";
@@ -13,14 +13,45 @@ import History from "./OrderHistory";
 import Wallet from "./Wallet";
 import Order from "./Order";
 import Current from "./CurrentOrder";
+import NewSignIn from "./NewSignIn";
+import NewSignUp from "./NewSignUp";
+import firebase, { db } from "./config";
 function App() {
   const [popUpActive, setPopUpActive] = useState(false);
+  const [isUser, setIsUser] = useState(false);
+
+  const auth = firebase.auth();
+
+  useEffect(() => {
+    auth.onAuthStateChanged(async (User) => {
+      if (User) {
+        setIsUser(true);
+      } else {
+        setIsUser(false);
+      }
+    });
+  }, [auth]);
+  if (!isUser) {
+    return (
+      <div>
+        <Route path="/NewSignIn" component={NewSignIn} />
+        <Route path="/NewSignUp" component={NewSignUp} />
+      </div>
+    );
+  }
+
+
+
+
+
   return (
     <NotificationContext.Provider value={{ popUpActive, setPopUpActive }}>
       <switch>
         <Route path="/Signup" component={Signup} default />
         <Route path="/SignIn" component={Signin} exact />
-        <Route path="/" component={Home} exact />
+        <Route path="/NewSignIn" component={NewSignIn} exact />
+        <Route path="/NewSignUp" component={NewSignUp} exact />
+        <Route path="/home" component={Home} exact />
         <Route path="/CurrentOrder" component={Current} exact />
         <Route path="/Wallet" component={Wallet} exact />
         <Route path="/Order" component={Order} exact />

@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 import Header from "./header";
 import NotificationPopup from "./NotificationPopup";
 import "./style.css";
-import ProgressBar from "@ramonak/react-progress-bar"; 
+import ProgressBar from "@ramonak/react-progress-bar";
 function Current() {
   return (
     <div className="cover-all">
@@ -61,32 +61,42 @@ function Current() {
                     completed={60}
                     maxCompleted={100}
                     bgColor="#008000"
-                  /> 
+                  />
                   {/* Check the link bellow for progressbar details and dependencies */}
                   {/* https://www.npmjs.com/package/@ramonak/react-progress-bar#examples */}
                   <div
                     style={{
                       background: "#F6F6F6",
                       borderRadius: "8px",
-                      padding: "20px 15px",
+                      padding: "20px 20px",
                       marginTop: "20px",
                     }}
                   >
                     <h5 className="boldspan ">Order Details:</h5>
-                    <ul
-                      style={{
-                        padding: "5px 15px",
-                        marginLeft: "130px",
-                        
-                      }}
-                    >
-                      <li>Pages: 14</li>
-                      <li>Copies: 2</li>
-                      <li>Type: Colored</li>
-                      <li>Size: A4</li>
-                      <li>Print on both sides</li>
-                      <li>Dispatch: Yes</li>
-                    </ul>
+                    <div className="d-flex flex-row">
+                      <ul
+                        style={{
+                          padding: "5px 15px",
+                          marginLeft: "130px",
+                        }}
+                      >
+                        <li>Pages: 14</li>
+                        <li>Copies: 2</li>
+                        <li>Type: Colored</li>
+                        <li>Size: A4</li>
+                        <li>Print on both sides</li>
+                        <li>Dispatch: Yes</li>
+                      </ul>
+                      <div
+                        style={{
+                          padding: "5px 15px",
+                          marginLeft: "130px",
+                        }}
+                      >
+                        <i class="fas fa-copy fa-8x"></i>
+                        {/* <img src={document} alt="document" /> */}
+                      </div>
+                    </div>
                   </div>
 
                   {/* <progress id="file" value="32" max="100">

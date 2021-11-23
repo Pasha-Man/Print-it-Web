@@ -35,14 +35,14 @@ function App () {
     return (
       <div>
         <Route path="/SignIn" component={SignIn} />
-        {/* <Route path="/SignUp" component={SignUp} /> */}
+        <Route path="/SignUp" component={SignUp} />
       </div>
     )
   }
   return (
     <div>
-      {/* <Route path="/" component={Home} /> */}
-      <Route path="/" component={Home} exact/>
+      <Route path="/" component={Home} />
+      <Route path="/home" component={Home} exact/>
       <Route path="/service" component={Service} />
       <Route path="/Customers" component={Customer} />
       <Route path="/Print_shops" component={Shops} />
