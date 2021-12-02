@@ -7,7 +7,6 @@ import Signin from "./Login";
 import Signup from "./Signup";
 import NotificationPopup from "./NotificationPopup";
 import NotificationContext from "./NotificationContext";
-import Background from "./backgroundAll.png";
 import Cancelled from "./CancelledOrder";
 import History from "./OrderHistory";
 import Wallet from "./Wallet";
@@ -34,21 +33,18 @@ function App() {
   if (!isUser) {
     return (
       <div>
-        <Route path="/NewSignIn" component={NewSignIn} />
+        <Route path="/NewSignIn" component={NewSignIn} default />
         <Route path="/NewSignUp" component={NewSignUp} />
       </div>
     );
   }
 
 
-
-
-
   return (
     <NotificationContext.Provider value={{ popUpActive, setPopUpActive }}>
-      <switch>
-        <Route path="/Signup" component={Signup} default />
-        <Route path="/SignIn" component={Signin} exact />
+      {/* <switch> */}
+        {/* <Route path="/Signup" component={Signup} default />
+        <Route path="/SignIn" component={Signin} exact /> */}
         <Route path="/NewSignIn" component={NewSignIn} exact />
         <Route path="/NewSignUp" component={NewSignUp} exact />
         <Route path="/home" component={Home} exact />
@@ -59,7 +55,7 @@ function App() {
         <Route path="/OrderHistory" component={History} exact />
         <Route path="/service" component={Service} />
         <Route path="/settings" component={Settings} />
-      </switch>
+      {/* </switch> */}
     </NotificationContext.Provider>
   );
 }

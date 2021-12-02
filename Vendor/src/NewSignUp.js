@@ -16,6 +16,8 @@ function NewSignUp() {
     console.log({
       email: data.get("email"),
       password: data.get("password"),
+      number: data.get("number"),
+      passwordAgain: data.get("passwordAgain"),
     });
     data.append("email", email);
     data.append("password", password);
@@ -50,15 +52,15 @@ function NewSignUp() {
           <p style={{ color: "white" }}>Print it</p>
         </div>
         <div>
-          <h3>Welcome</h3>
+          <h3>Sign Up</h3>
         </div>
-        <div></div>
         <div style={style.leftAligner}>
           <p style={style.topHolder}>Email</p>
           <input
             style={style.feilds}
             type="text"
             placeholder="Enter your Email"
+            size="70"
             onChange={(event) => setEmail(event.target.value)}
           ></input>
           <p style={style.bottomHolder}>Password</p>
@@ -66,6 +68,7 @@ function NewSignUp() {
             style={style.feilds}
             type="password"
             placeholder="Enter your password"
+            size="70"
             onChange={(event) => setPassword(event.target.value)}
           ></input>
           <p style={style.bottomHolder}>Confirm Password</p>
@@ -73,23 +76,27 @@ function NewSignUp() {
             style={style.feilds}
             type="password"
             placeholder="Enter your password "
-            onChange={(event) => setPasswordAgain(event.target.value)}
+            size="70"
+            // onChange={(event) => setPasswordAgain(event.target.value)}
           ></input>
           <p style={style.topHolder}>Phone Number</p>
           <input
             style={style.feilds}
             type="text"
             placeholder="Enter your Phone number"
+            size="70"
             onChange={(event) => setNumber(event.target.value)}
           ></input>
         </div>
-        <div>
+        <div style={{margintop:"10px"}}>
           <button type="button" style={style.button} onClick={handleSubmit}>
             Sign Up{" "}
           </button>
         </div>
         <div style={style.sLastLine}>
-          <a href="./NewSignIn">Already have an account? Sign In</a>
+          <a href="./NewSignIn" style={{ color: "#cf4415" }}>
+            Already have an account? Sign In
+          </a>
         </div>
       </div>
     </div>

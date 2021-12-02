@@ -60,6 +60,7 @@ function NewSignIn() {
             style={style.feilds}
             type="text"
             placeholder="Enter your Email"
+            size="70"
             onChange={(event) => setEmail(event.target.value)}
           ></input>
           <p style={style.bottomHolder}>Password</p>
@@ -67,6 +68,7 @@ function NewSignIn() {
             style={style.feilds}
             type="password"
             placeholder="Enter your password"
+            size="70"
             onChange={(event) => setPassword(event.target.value)}
           ></input>
         </div>
@@ -77,7 +79,10 @@ function NewSignIn() {
         </div>
         <div style={style.lastLine}>
           <a style={{ padding: "0 120px" }}>Forgot password?</a>
-          <a href="./NewSignUp" style={{ paddingLeft: "80px" }}>
+          <a
+            href="./NewSignUp"
+            style={{ paddingLeft: "80px", color: "#cf4415" }}
+          >
             Sign up
           </a>
         </div>

@@ -96,7 +96,21 @@ function Shops () {
             </div>
           </div>
           <h4 className="boldspan mb-5 mt-5">Manage Print Shops</h4>
-          <div>
+           <div
+              style={{
+                background: "#F6F6F6",
+                borderRadius: "8px",
+                padding: "20px 15px",
+              }}
+            >
+              <div
+                style={{
+                  background: "#ffffff",
+                  borderRadius: "5px",
+                  padding: "50px 30px",
+                  border: "1px solid #F6F6F6",
+                }}
+              >
             <Table striped bordered hover size="sm">
               <thead>
                 <tr className="Top-Table-Bar">
@@ -136,6 +150,7 @@ function Shops () {
                 })}
               </tbody>
             </Table>
+            </div>
           </div>
         </div>
       </div>

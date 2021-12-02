@@ -2191,6 +2191,7 @@ transition: transform 80ms ease-in;
   font-size:large;
   font-weight:bold;
   padding:20px;
+  border:none;
 
 }
 .yellowButton{
@@ -2199,6 +2200,7 @@ transition: transform 80ms ease-in;
   font-size:large;
   font-weight:bold;
   padding:20px;
+  border:none;
 
 }
 .redButton{
@@ -2207,5 +2209,17 @@ transition: transform 80ms ease-in;
   font-size:large;
   font-weight:bold;
   padding:20px;
+  border:none;
 
+}
+.Top-Table-Bar{
+  background-color: #ff976d;
+}
+th{
+  color: white;
+}
+.blue-button{
+  background-color:#ff976d;
+  border:none;
+  color: white;
 }

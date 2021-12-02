@@ -1,133 +1,90 @@
 import React, { useState } from "react";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-// import FormControlLabel from "@mui/material/FormControlLabel";
-// import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import {
-  Redirect,
-} from "react-router-dom";
-import firebase from './config'
-// import Paper from "material-ui/Paper";
+import style from "./style";
+import firebase from "./config";
+import { Redirect } from "react-router-dom";
 
+function NewSignIn() {
+  const [isLoggedIn, setisLoggedIn] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-
-
-const theme = createTheme();
-
-export default function SignIn () {
-
-  const [isLoggedIn, setisLoggedIn] = useState(null)
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    console.log("Button has been clicked");
+    const data = new FormData();
     // eslint-disable-next-line no-console
 
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    data.append("email", email);
+    data.append("password", password);
 
-    firebase.auth().signInWithEmailAndPassword(data.get("email"), data.get("password"))
+    console.log(data.get("email"));
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(data.get("email"), data.get("password"))
       .then((userCredential) => {
-        // Signed in 
+        // Signed in
         var user = userCredential.user;
         console.log("User is", user);
-        setisLoggedIn(true)
+        setisLoggedIn(true);
         // ...
       })
       .catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
         // ..
-        console.log("Error is", errorMessage)
+        console.log("Error is", errorMessage);
         console.log("Error code is", errorCode);
       });
-
   };
 
-  if (isLoggedIn) return <Redirect to="/home" />
+  if (isLoggedIn) return <Redirect to="/home" />;
+
   return (
-    <div className="singIn">
-      <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs">
-          <CssBaseline />
-          <Box
-            sx={{
-              marginTop: 8,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
+    <div style={style.fullContainer}>
+      {/* <div style={style.image}></div> */}
+      <div style={style.container}>
+        <div style={style.strecther}>
+          <p style={{ color: "white" }}>Print it</p>
+        </div>
+        <div>
+          <h3>Hi there! Nice to see you again!</h3>
+        </div>
+        <div>
+          <h5>Login to your account</h5>
+        </div>
+        <div style={style.leftAligner}>
+          <p style={style.topHolder}>Email</p>
+          <input
+            style={style.feilds}
+            type="text"
+            placeholder="Enter your Email"
+            onChange={(event) => setEmail(event.target.value)}
+          ></input>
+          <p style={style.bottomHolder}>Password</p>
+          <input
+            style={style.feilds}
+            type="password"
+            placeholder="Enter your password"
+            onChange={(event) => setPassword(event.target.value)}
+          ></input>
+        </div>
+        <div>
+          <button type="button" style={style.button} onClick={handleSubmit}>
+            Login
+          </button>
+        </div>
+        <div style={style.lastLine}>
+          <a style={{ padding: "0 120px" }}>Forgot password?</a>
+          {/* <a
+            href="./NewSignUp"
+            style={{ paddingLeft: "80px", color: "#ff976d" }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-              <LockOutlinedIcon />
-            </Avatar>
-            <Typography component="h1" variant="h5">
-              Sign in
-            </Typography>
-            <Box
-              component="form"
-              onSubmit={handleSubmit}
-              noValidate
-              sx={{ mt: 1 }}
-            >
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              {/* <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            /> */}
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Sign In
-              </Button>
-              <Grid container>
-                <Grid item xs>
-                  {/* <Link href="#" variant="body2">
-                  Forgot password?
-                </Link> */}
-                </Grid>
-                <Grid item>
-                  <Link href="./SignUp" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
-            </Box>
-          </Box>
-        </Container>
-      </ThemeProvider>
+            Sign up
+          </a> */}
+        </div>
+      </div>
     </div>
   );
 }
+export default NewSignIn;
