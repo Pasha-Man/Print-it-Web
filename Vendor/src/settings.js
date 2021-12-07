@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./header";
-
 import NotificationPopup from "./NotificationPopup";
 
 function Settings(){
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [number, setNumber] = useState("");
+  const [jazzcash, setJazzcash] = useState("");
+  const [account, setAccount] = useState("");
+  const [latitude, setLatitude] = useState("");
+  const [longitude, setLongitude] = useState("");
+
+  // Data is being stored as strings
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Button has been clicked");
+    const data = new FormData();
+    // eslint-disable-next-line no-console
+
+    data.append("email", email);
+    data.append("password", password);
+    data.append("number", number);
+    data.append("jazzcash", jazzcash);
+    data.append("account", account);
+    data.append("latitude", latitude);
+    data.append("longitude", longitude);
+
+
+    console.log(data.get("latitude")); 
+    console.log(data.get("longitude"));
+    console.log(data.get("email"));
+    console.log(typeof(data.get("email")));
+    console.log(data.get("password"));
+    console.log(data.get("number"));
+    console.log(data.get("jazzcash"));
+    console.log(data.get("account"));
+
+
+  }
+
   return (
     <div>
       <Header setting="setting" />
@@ -63,6 +99,7 @@ function Settings(){
                       width: "250px",
                     }}
                     placeholder="sheikhpasha12@gmail.com"
+                    onChange={(event) => setEmail(event.target.value)}
                   ></input>
                   <i
                     className="fa fa-edit"
@@ -107,6 +144,7 @@ function Settings(){
                       width: "250px",
                     }}
                     placeholder="12345678"
+                    onChange={(event) => setPassword(event.target.value)}
                   ></input>
                   <i
                     className="fa fa-eye"
@@ -151,6 +189,7 @@ function Settings(){
                       width: "250px",
                     }}
                     placeholder="03072284570"
+                    onChange={(event) => setNumber(event.target.value)}
                   ></input>
                   <i
                     className="fa fa-edit"
@@ -175,15 +214,15 @@ function Settings(){
                 className="mb-4"
               >
                 <label
-                  for="shop"
+                  for="latitude"
                   className="boldspan"
                   style={{ marginRight: "40px", fontSize: "20px" }}
                 >
-                  Shop Address
+                  Latitude
                 </label>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <input
-                    id="shop"
+                    id="latitude"
                     type="text"
                     style={{
                       border: "1px solid #c7c5c5",
@@ -194,6 +233,51 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
+                    onChange={(event) => setLatitude(event.target.value)}
+                  ></input>
+                  <i
+                    className="fa fa-edit"
+                    style={{
+                      border: "1px solid #c7c5c5",
+                      borderLeft: "0",
+                      height: "35px",
+                      padding: "07px",
+                      borderRadius: "0 4px 4px 0",
+                      cursor: "pointer",
+                    }}
+                  ></i>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: "70%",
+                  justifyContent: "space-between",
+                }}
+                className="mb-4"
+              >
+                <label
+                  for="longitude"
+                  className="boldspan"
+                  style={{ marginRight: "40px", fontSize: "20px" }}
+                >
+                  Longitude
+                </label>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <input
+                    id="longitude"
+                    type="text"
+                    style={{
+                      border: "1px solid #c7c5c5",
+                      borderRight: "0",
+                      height: "35px",
+                      outline: "none",
+                      borderRadius: "4px 0 0 4px",
+                      paddingLeft: "5px",
+                      width: "250px",
+                    }}
+                    onChange={(event) => setLongitude(event.target.value)}
                   ></input>
                   <i
                     className="fa fa-edit"
@@ -237,6 +321,7 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
+                    onChange={(event) => setAccount(event.target.value)}
                     placeholder="22927897027"
                   />
                   <i
@@ -281,6 +366,7 @@ function Settings(){
                       paddingLeft: "5px",
                       width: "250px",
                     }}
+                    onChange={(event) => setJazzcash(event.target.value)}
                     placeholder="03072284570"
                   />
                   <i
@@ -301,7 +387,11 @@ function Settings(){
                 style={{ display: "flex", justifyContent: "center" }}
               >
                 <div className="col-md-4" style={{ textAlign: "center" }}>
-                  <button className="service-h3" style={{ border: "none" }}>
+                  <button
+                    className="service-h3"
+                    onClick={handleSubmit}
+                    style={{ border: "none" }}
+                  >
                     Save
                   </button>
                 </div>

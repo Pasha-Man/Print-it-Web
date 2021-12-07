@@ -33,11 +33,12 @@ function App() {
   if (!isUser) {
     return (
       <div>
-        <Route path="/NewSignIn" component={NewSignIn} default />
+        <Route path="/" component={NewSignIn} default />
         <Route path="/NewSignUp" component={NewSignUp} />
       </div>
     );
   }
+  
 
 
   return (

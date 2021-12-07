@@ -34,7 +34,7 @@ function App () {
   if (!isUser) {
     return (
       <div>
-        <Route path="/SignIn" component={SignIn} />
+        <Route path="/" component={SignIn} default />
         <Route path="/SignUp" component={SignUp} />
       </div>
     )

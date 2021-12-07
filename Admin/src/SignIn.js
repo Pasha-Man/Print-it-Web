@@ -59,6 +59,7 @@ function NewSignIn() {
             style={style.feilds}
             type="text"
             placeholder="Enter your Email"
+            size="70"
             onChange={(event) => setEmail(event.target.value)}
           ></input>
           <p style={style.bottomHolder}>Password</p>
@@ -66,6 +67,7 @@ function NewSignIn() {
             style={style.feilds}
             type="password"
             placeholder="Enter your password"
+            size="70"
             onChange={(event) => setPassword(event.target.value)}
           ></input>
         </div>

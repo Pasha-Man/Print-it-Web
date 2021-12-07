@@ -30,7 +30,8 @@ const style = {
     paddingLeft: "20px",
   },
   feilds: {
-    backgroundColor: "#e99b7f",
+    // backgroundColor: "#e99b7f",
+    justifyContent  : "center",
   },
   // input:{
   //   Width: "500px",

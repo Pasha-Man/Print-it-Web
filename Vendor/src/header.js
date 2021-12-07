@@ -47,7 +47,7 @@ function Header(props) {
           <nav class="sidebar sidebar-offcanvas">
             <ul class="nav">
               <li class="nav-item center-item" className={props.printer}>
-                <a class="nav-link" href="/dashboard">
+                <a class="nav-link" href="/home">
                   <i class="fa fa-home fa-2x center-icon"></i>
                 </a>
               </li>
