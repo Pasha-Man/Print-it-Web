@@ -19,6 +19,7 @@ const firebaseConfig = {
   // appId: "1:752634262586:web:81d27b251ff86ff9be7103",
   // measurementId: "G-JX3BVMFJDC",
 
+
   // apiKey: "AIzaSyCDMPn4E4K8tlQJ8Ij9bEK4hvsHBuzRY3M",
   // authDomain: "print-it-7f9da.firebaseapp.com",
   // databaseURL: "https://print-it-7f9da-default-rtdb.firebaseio.com",
@@ -26,7 +27,9 @@ const firebaseConfig = {
   // storageBucket: "print-it-7f9da.appspot.com",
   // messagingSenderId: "752634262586",
   // appId: "1:752634262586:web:122299f5b71c792dbe7103",
-  // measurementId: "G-XWTSC8BVXV",
+  // measurementId: "${config.measurementId}"
+
+
 
   apiKey: "AIzaSyBoE21j3-o3eABr2iA3_CCwIC6YkXGzQDE",
   authDomain: "print-it-fd3f4.firebaseapp.com",

@@ -2,10 +2,21 @@ import React, { useEffect, useState } from "react";
 import Header from "./header";
 import "./style.css";
 import Table from "react-bootstrap/Table";
-import firebase, { db } from './config'
+import firebase, { db, auth} from './config'
+
+
+// function sendMessage(message){
+//   await db.collection("chat").doc(auth.user.id).collection(auth.user.id).set({
+//     name: auth.user.displayName,
+//     uid: auth.user.uid,
+//     message: message,
+//     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+//   });
+// }
 
 function Shops () {
 
+  
 
   const [IsLoading, setIsLoading] = useState(true)
   const [Data, setData] = useState([])
@@ -13,15 +24,17 @@ function Shops () {
 
     const getData = async () => {
       if (IsLoading) {
-        const snapshot = await db.collection('Shops').get()
+        const snapshot = await db.collection('printshops').get()
         snapshot.forEach(doc => {
           const shopData = {
-            "id": doc.id,
-            "name": doc.data().name,
-            "location": doc.data().location,
-            "number": doc.data().number,
-            "joinedDate": doc.data().joinedDate
+            id: doc.id,
+            name: doc.data().name,
+            location: doc.data().address,
+            number: doc.data().phonenumber,
+            joinedDate: doc.data().joinedDate
+            
           }
+          
           setData(props => {
             return [
               ...props,

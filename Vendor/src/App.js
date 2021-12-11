@@ -14,7 +14,9 @@ import Order from "./Order";
 import Current from "./CurrentOrder";
 import NewSignIn from "./NewSignIn";
 import NewSignUp from "./NewSignUp";
+// import Chat from "./Chat";
 import firebase, { db } from "./config";
+import Graph from "./Graph";
 function App() {
   const [popUpActive, setPopUpActive] = useState(false);
   const [isUser, setIsUser] = useState(false);
@@ -46,11 +48,13 @@ function App() {
       {/* <switch> */}
         {/* <Route path="/Signup" component={Signup} default />
         <Route path="/SignIn" component={Signin} exact /> */}
-        <Route path="/NewSignIn" component={NewSignIn} exact />
-        <Route path="/NewSignUp" component={NewSignUp} exact />
+        {/* <Route path="/NewSignIn" component={NewSignIn} exact />
+        <Route path="/NewSignUp" component={NewSignUp} exact /> */}
         <Route path="/home" component={Home} exact />
         <Route path="/CurrentOrder" component={Current} exact />
         <Route path="/Wallet" component={Wallet} exact />
+        {/* <Route path="/Chat" component={Chat} exact /> */}
+        <Route path="/Graph" component={Graph} exact /> 
         <Route path="/Order" component={Order} exact />
         <Route path="/CancelledOrder" component={Cancelled} exact />
         <Route path="/OrderHistory" component={History} exact />

@@ -1,7 +1,32 @@
 import React from "react";
 import Header from "./header";
 import NotificationPopup from "./NotificationPopup";
+import Graph from "./Graph";
 import "./style.css";
+
+const state = {
+  labels: ["January", "February", "March", "April", "May"],
+  datasets: [
+    {
+      label: "Rainfall",
+      backgroundColor: "rgba(75,192,192,1)",
+      borderColor: "rgba(0,0,0,1)",
+      borderWidth: 2,
+      data: [65, 59, 80, 81, 56],
+    },
+    {
+      label: "Water",
+      backgroundColor: "rgba(0,0,0)",
+      borderColor: "rgba(0,0,0,1)",
+      borderWidth: 2,
+      data: [65, 59, 80, 81, 56],
+    },
+  ],
+};
+
+
+
+
 function Home() {
   return (
     <div>
@@ -44,8 +69,8 @@ function Home() {
           <h4 className="boldspan mb-5 mt-5">
             Show how your business is going
           </h4>
-          <div id="chart_div"></div>
         </div>
+        <Graph  />
       </div>
     </div>
   );

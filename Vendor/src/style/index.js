@@ -19,7 +19,7 @@ const style = {
     background: "rgb(233, 155, 127)",
     borderRadius: "60px",
     textAlign: "center",
-    // opcaity: "0.6",
+    opacity: "0.8",
     // padding: "10px 0",
   },
   strecther: {
