@@ -31,6 +31,12 @@ function Header(props) {
             ></i>
             <h1>Print it</h1>
             <i
+              className="fa fa-comments-o fa-2x"
+              onClick={() => {
+                window.location.href = "./Chat/home";
+              }}
+            ></i>
+            <i
               className="fa fa-bell fa-2x"
               onClick={() => setPopUpActive(!popUpActive)}
             ></i>

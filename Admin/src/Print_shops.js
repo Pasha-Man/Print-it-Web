@@ -24,7 +24,7 @@ function Shops () {
 
     const getData = async () => {
       if (IsLoading) {
-        const snapshot = await db.collection('printshops').get()
+        const snapshot = await db.collection('printshop').get()
         snapshot.forEach(doc => {
           const shopData = {
             id: doc.id,
